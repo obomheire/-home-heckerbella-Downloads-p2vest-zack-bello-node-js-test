@@ -10,7 +10,7 @@ const config: { [key: string]: Knex.Config } = {
       port: 3306,
       user: "root",
       password: "Secret@123",
-      database: "wallet_service_db",
+      database: "p2vest_db",
     },
     migrations: {
       tableName: "migrations",

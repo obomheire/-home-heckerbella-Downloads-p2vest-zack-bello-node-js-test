@@ -2,10 +2,10 @@ JWT_SECRET=secret-could-be-any-string
 JWT_EXPIRES=15d
 host=localhost
 user=root
-password=mysql_password
-database=database_name
+password=Secret@123
+database=p2vest_db
 
-test_database=test_database
+test_database=p2vest_d_test_b
 
 PRODUCTION_USERNAME=production_user
 PRODUCTION_PASSWORD=production_password
