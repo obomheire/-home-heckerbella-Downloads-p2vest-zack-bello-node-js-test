@@ -5,6 +5,7 @@ import {
   fundAccount,
   withdraw,
   getMyBalance,
+  getEmailAndAccountBalance,
 } from "../controllers/accountsController";
 
 const router = express.Router();
@@ -14,5 +15,6 @@ router.post("/fund", fundAccount);
 router.post("/withdraw", withdraw);
 router.post("/transfer", transferFunds);
 router.get("/balance", getMyBalance);
+router.get("/current", getEmailAndAccountBalance);
 
 export default router;

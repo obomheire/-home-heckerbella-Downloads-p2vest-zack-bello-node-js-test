@@ -92,3 +92,14 @@ export const getMyBalance = async (req: Request, res: Response) => {
     res.status(500).json({ status: "error", message: e.message });
   }
 };
+
+export const getEmailAndAccountBalance = async (req: Request, res: Response) => {
+  try {
+    const acct = await AccountRepository.getAccountDetails(req.user!.id!);
+
+    res.status(200).json({ status: "success", data: acct });
+  } catch (e: any) {
+    res.status(500).json({ status: "error", message: e.message });
+  }
+};
+

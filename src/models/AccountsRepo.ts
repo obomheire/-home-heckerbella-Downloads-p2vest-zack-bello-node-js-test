@@ -151,6 +151,22 @@ class AccountRepository {
       });
     return this.getAccountByUserId(fromUserId);
   }
+
+  static async getAccountDetails(userId: string) {
+    const account = await knexConnection("accounts")
+      .select("balance")
+      .where({ user_id: userId });
+    
+      const user = await knexConnection("users")
+        .select("email")
+        .where({ id: userId });
+
+    if (account.length === 0) {
+      throw new Error("User does not have an account");
+    }
+
+    return { ballance: account[0], email: user[0] };
+  }
 }
 
 export default AccountRepository;
