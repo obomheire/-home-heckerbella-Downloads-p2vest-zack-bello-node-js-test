@@ -1,0 +1,15 @@
+JWT_SECRET=secret-could-be-any-string
+JWT_EXPIRES=15d
+host=localhost
+user=root
+password=mysql_password
+database=database_name
+
+test_database=test_database
+
+PRODUCTION_USERNAME=production_user
+PRODUCTION_PASSWORD=production_password
+PRODUCTION_HOST=production_host
+PRODUCTION_DATABASE=production_db
+
+NODE_ENV=development

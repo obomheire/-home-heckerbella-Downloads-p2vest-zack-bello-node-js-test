@@ -1,0 +1,21 @@
+### Get localhost
+GET http://localhost:3000/
+
+### Register User
+POST http://localhost:3000/api/v1/auth/signup
+content-type: application/json
+
+{
+    "username" : "zackoverflow",
+    "email": "zack@gmail.com",
+    "password": "Secret@123"
+}
+
+### Login User
+POST http://localhost:3000/api/v1/auth/login
+content-type: application/json
+
+{
+    "email": "zack@gmail.com",
+    "password": "Secret@123"
+}
