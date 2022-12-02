@@ -1,16 +1,17 @@
 import type { Knex } from "knex";
 import dotenv from "dotenv";
-dotenv.config();
+import * as path from "path";
+dotenv.config({ path: path.join(__dirname, "../../.env") });
 
 const config: { [key: string]: Knex.Config } = {
   development: {
     client: "mysql",
     connection: {
-      host: "localhost",
+      host: process.env.host,
       port: 3306,
-      user: "root",
-      password: "Secret@123",
-      database: "p2vest_db",
+      user: process.env.user,
+      password: process.env.password,
+      database: process.env.database,
     },
     migrations: {
       tableName: "migrations",
