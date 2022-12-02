@@ -105,4 +105,4 @@ C.  let number = 70;
         console.log(result);
     });
 
-    this will look for the table name credit and incerace the value by number
+  this will look for the table name credit and incerace the value by number
